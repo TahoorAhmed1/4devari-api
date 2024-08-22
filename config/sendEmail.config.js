@@ -1,68 +1,71 @@
-const Brevo = require('@getbrevo/brevo');
-const authConfig = require('./auth.config');
+const Brevo = require("@getbrevo/brevo");
+const authConfig = require("./auth.config");
 const defaultClient = Brevo.ApiClient.instance;
-const apiKey = defaultClient.authentications['api-key'];
-   apiKey.apiKey = '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';
+const apiKey = defaultClient.authentications["api-key"];
+apiKey.apiKey = "";
 
 module.exports.sendSignUpEmail = async (data) => {
-   const apiInstance = new Brevo.TransactionalEmailsApi();
+  const apiInstance = new Brevo.TransactionalEmailsApi();
 
-   let sendSmtpEmail = new Brevo.SendSmtpEmail();
+  let sendSmtpEmail = new Brevo.SendSmtpEmail();
 
-   sendSmtpEmail.templateId = 1; // 6 is google , 5 is early access
-   sendSmtpEmail.sender = { name: "4Devari", email: "devarisocials@gmail.com" };
-   sendSmtpEmail.to = [{ email: data?.email }];
-   sendSmtpEmail.params = { name: data?.name, link: `${authConfig.FRONT_BASE_URL}/login?confirmationCode=${data?.link}`};
-   
-   return apiInstance.sendTransacEmail(sendSmtpEmail).then(
-      function (data) {
-        console.log("API called successfully.", data);
-      },
-      function (error) {
-        console.error("Email Error", error);
-      }
-    );
-}
+  sendSmtpEmail.templateId = 1; // 6 is google , 5 is early access
+  sendSmtpEmail.sender = { name: "4Devari", email: "devarisocials@gmail.com" };
+  sendSmtpEmail.to = [{ email: data?.email }];
+  sendSmtpEmail.params = {
+    name: data?.name,
+    link: `${authConfig.FRONT_BASE_URL}/login?confirmationCode=${data?.link}`,
+  };
+
+  return apiInstance.sendTransacEmail(sendSmtpEmail).then(
+    function (data) {
+      console.log("API called successfully.", data);
+    },
+    function (error) {
+      console.error("Email Error", error);
+    }
+  );
+};
 
 module.exports.sendForgotPasswordEmail = async (data) => {
-   const apiInstance = new Brevo.TransactionalEmailsApi();
+  const apiInstance = new Brevo.TransactionalEmailsApi();
 
-   let sendSmtpEmail = new Brevo.SendSmtpEmail();
+  let sendSmtpEmail = new Brevo.SendSmtpEmail();
 
-   sendSmtpEmail.templateId = 4;
-   sendSmtpEmail.sender = { name: "4Devari", email: "devarisocials@gmail.com" };
-   sendSmtpEmail.to = [{ email: data?.email }];
-   sendSmtpEmail.params = { name: data?.name, link: data?.link};
-   
-   return apiInstance.sendTransacEmail(sendSmtpEmail).then(
-      function (data) {
-        console.log("API called successfully.", data);
-      },
-      function (error) {
-        console.error("Email Error", error);
-      }
-    );
-}
+  sendSmtpEmail.templateId = 4;
+  sendSmtpEmail.sender = { name: "4Devari", email: "devarisocials@gmail.com" };
+  sendSmtpEmail.to = [{ email: data?.email }];
+  sendSmtpEmail.params = { name: data?.name, link: data?.link };
+
+  return apiInstance.sendTransacEmail(sendSmtpEmail).then(
+    function (data) {
+      console.log("API called successfully.", data);
+    },
+    function (error) {
+      console.error("Email Error", error);
+    }
+  );
+};
 
 module.exports.sendSubscriptionEmail = async (data) => {
-   const apiInstance = new Brevo.TransactionalEmailsApi();
+  const apiInstance = new Brevo.TransactionalEmailsApi();
 
-   let sendSmtpEmail = new Brevo.SendSmtpEmail();
+  let sendSmtpEmail = new Brevo.SendSmtpEmail();
 
-   sendSmtpEmail.templateId = 5;
-   sendSmtpEmail.sender = { name: "4Devari", email: "devarisocials@gmail.com" };
-   sendSmtpEmail.to = [{ email: data?.email }];
+  sendSmtpEmail.templateId = 5;
+  sendSmtpEmail.sender = { name: "4Devari", email: "devarisocials@gmail.com" };
+  sendSmtpEmail.to = [{ email: data?.email }];
   //  sendSmtpEmail.params = { name: data?.name, link: data?.link};
-   
-   return apiInstance.sendTransacEmail(sendSmtpEmail).then(
-      function (data) {
-        console.log("API called successfully.", data);
-      },
-      function (error) {
-        console.error("Email Error", error);
-      }
-    );
-}
+
+  return apiInstance.sendTransacEmail(sendSmtpEmail).then(
+    function (data) {
+      console.log("API called successfully.", data);
+    },
+    function (error) {
+      console.error("Email Error", error);
+    }
+  );
+};
 
 module.exports.sendContactEmail = async (data) => {
   const apiInstance = new Brevo.TransactionalEmailsApi();
@@ -72,31 +75,17 @@ module.exports.sendContactEmail = async (data) => {
   sendSmtpEmail.templateId = 6;
   sendSmtpEmail.sender = { name: "4Devari", email: "devarisocials@gmail.com" };
   sendSmtpEmail.to = [{ email: data?.email }];
-  sendSmtpEmail.params = { ...data};
-  
+  sendSmtpEmail.params = { ...data };
+
   return apiInstance.sendTransacEmail(sendSmtpEmail).then(
-     function (data) {
-       console.log("API called successfully.", data);
-     },
-     function (error) {
-       console.error("Email Error", error);
-     }
-   );
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    function (data) {
+      console.log("API called successfully.", data);
+    },
+    function (error) {
+      console.error("Email Error", error);
+    }
+  );
+};
 
 // const config = require('./auth.config');
 // // const s3Config = require('./s3.config');
