@@ -1,0 +1,160 @@
+<script type="text/javascript">
+    function preventBack() { window.history.forward(); }
+    setTimeout("preventBack()", 0);
+    window.onunload = function () { null };
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="" />
+    <title>PayFast</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140433163-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140433163-1');
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/Ecommerce/Flows/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Ecommerce/Flows/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="/Ecommerce/Flows/css/checkbox.min.css">
+    <link rel="stylesheet" href="/Ecommerce/Flows/css/global.css" />
+    <link rel="stylesheet" href="/Ecommerce/Flows/css/style.css" />
+    <link rel="stylesheet" href="/Ecommerce/Flows/css/model-loading.css" />
+    <link rel="stylesheet" href="/Ecommerce/Flows/css/select2.min.css" />
+    <link rel="shortcut icon" href="/Ecommerce/Flows/img/png/favicon.png">
+    <script src="/Ecommerce/Flows/js/modernizr.js"></script>
+    <script src="/Ecommerce/Flows/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="/Ecommerce/Flows/js/lib/jquery-migrate-1.4.1.min.js"></script>
+    <script src="/Ecommerce/Flows/common-lib.js?d=20190218&amp;id=0.0.0.0" type="text/javascript"></script>
+    <script src="/Ecommerce/Flows/js/lib/jquery.validate.min.js"></script>
+    <script src="/Ecommerce/Flows/js/lib/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/Ecommerce/Flows/js/lib/jquery.inputmask.bundle.js"></script>
+    <script src="/Ecommerce/Flows/js/select2.min.js"></script>
+    <script src="/Ecommerce/Flows/js/creditcard-validator.js"></script>
+
+
+</head>
+
+<body class="skin-blue">
+    <!-- header logo: style can be found in header.less -->
+    <header class="clearfix">
+        <div class="container">
+            <a href="#" id="logo" class="pull-left"></a>
+
+
+
+
+
+
+        </div>
+    </header>
+
+
+
+
+    <!-- Main content -->
+    <section>
+        <div class="container pad-box">
+
+
+            <div class="row">
+
+
+
+
+
+
+                <div class="full-col6 tab-col p-option mh">
+                    <div class="center-align content-pad">
+                    </div>
+                </div>
+                <div class="modal fade in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+                    aria-hidden="true" style="display: block;">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="ModalLabel">Error Message</h4>
+                            </div>
+
+                            <div class="modal-body">
+
+                                <div class="box-body" style="margin-top:10px;">
+
+                                    <div class="error-screen">
+                                        <i class="error-icon"></i>
+
+                                        <input id="errorCode" name="errorCode" type="hidden" value="" />
+                                        <div class="sm-space"></div>
+                                        <p>Your transaction cannot be process at this moment. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="container">
+            <a href="#" class="pull-left link bold policy" target="_blank"
+                onclick="window.open('../Privacy Policy for Payfast.pdf', 'mypopup'); return false;">Privacy Policy</a>
+
+            <div class="ft-logo pull-right"
+                style="background-image: url('https://ipguat.apps.net.pk/Ecommerce/Flows/img/apps-min.png');"></div>
+            <div id="img_gplay_logo" class="ft-logo pull-right"
+                style="background-image: url('../../Flows/img/gplay.png'); text-align:center"></div>
+
+
+        </div>
+    </footer>
+
+
+
+    <!-- ./wrapper -->
+
+
+
+    <input type="hidden" id="project_baseUrl" style="display: none;" value="https://ipguat.apps.net.pk/Ecommerce">
+
+
+
+
+    <div class="remodal" data-remodal-id="request">
+        <button data-remodal-action="close" class="remodal-close">
+            <i class="mdi mdi-close"></i>
+        </button>
+    </div>
+
+
+    <script src="/Ecommerce/Flows/js/plugins.js"></script>
+    <script src="/Ecommerce/Flows/js/bootstrap-select.min.js"></script>
+    <script src="/Ecommerce/Flows/js/app.js"></script>
+
+</body>
+<!-- InputMask -->
+
+</html>

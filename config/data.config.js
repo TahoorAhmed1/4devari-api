@@ -1,0 +1,102 @@
+module.exports = {
+  status: {
+    PENDING: 'PENDING',
+    ACTIVE: 'ACTIVE',
+    ARCHIVED: 'ARCHIVED'
+  },
+  residentialPropertyTypes: [
+    'House',
+    'Flat',
+    'Lower portion',
+    'Upper portion',
+    'Farmhouse',
+    'Pent house',
+    'Basement',
+    'Hostel',
+    'Guest house',
+    'Hotel suites',
+    'Beach huts',
+  ],
+  commercialPropertyTypes: [
+    'Office',
+    'Shop',
+    'Warehouse',
+    'Factory',
+    'Building',
+    'Others',
+  ],
+  plotPropertyTypes: [
+    'Residential plot',
+    'Commercial plot',
+    'Agriculture plot',
+    'Industrial plot',
+    'Plot file',
+    'Plot form',
+  ],
+  colivingSpaceTypes: ['House', 'Flat', 'Hostel'],
+
+  propertyTypesBuy: {
+    residential: [
+      'House',
+      'Flat',
+      'Lower portion',
+      'Upper portion',
+      'Farmhouse',
+      'Pent house',
+      'Basement',
+      'Hostel',
+      'Guest house',
+      'Hotel suites',
+      'Beach huts',
+    ],
+    commercial: [
+      'Office',
+      'Shop',
+      'Warehouse',
+      'Factory',
+      'Building',
+      'Others',
+    ],
+    plot: [
+      'Residential plot',
+      'Commercial plot',
+      'Agriculture plot',
+      'Industrial plot',
+      'Plot file',
+      'Plot form',
+    ],
+  },
+
+  propertyTypesRent: {
+    residential: [
+      'House',
+      'Flat',
+      'Lower portion',
+      'Upper portion',
+      'Farmhouse',
+      'Pent house',
+      'Basement',
+      'Guest house',
+      'Hotel suites',
+      'Beach huts',
+    ],
+    commercial: [
+      'Office',
+      'Shop',
+      'Warehouse',
+      'Factory',
+      'Building',
+      'Others',
+    ],
+    plot: [
+      'Residential plot',
+      'Commercial plot',
+      'Agriculture plot',
+      'Industrial plot',
+    ],
+  },
+
+  sharedSpaces: {
+    colivingSpaces: ['House', 'Flat', 'Hostel'],
+  },
+};
